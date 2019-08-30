@@ -12,10 +12,10 @@ import Foto3 from '../assets/photos/arthur3.png'
 export default props => {
     return (
         <View style={styles.container}>
-            <Image source={Foto1} style={styles.photoB} />
+            <Image source={Foto1} style={styles.photoB} resizeMode="cover" />
             <View style={styles.secondary}>
-                <Image source={Foto2} style={styles.photoSecondary} />
-                <Image source={Foto3} style={styles.photoSecondary} />
+                <Image source={Foto2} style={styles.photoSecondary} resizeMode="cover" />
+                <Image source={Foto3} style={styles.photoSecondary} resizeMode="cover" />
             </View>
         </View>
     )

@@ -1,25 +1,30 @@
 import React from 'react'
 import {
     StyleSheet,
-    ScrollView
+    ScrollView,
+    View
 } from 'react-native'
 
 import HorizontalItemMenu from './HorizontalItemMenu'
 
 export default props => {
     return (
-        <ScrollView horizontal style={styles.container}>
-            <HorizontalItemMenu text="Comunicados" icon="bullhorn" notification={5} />
-            <HorizontalItemMenu text="Diário" icon="history" />
-            <HorizontalItemMenu text="Cardápio" icon="utensils" />
-            <HorizontalItemMenu text="Mural de Fotos" icon="camera-retro" />
-        </ScrollView>
+        <View style={styles.container}>
+            <ScrollView horizontal>
+                <HorizontalItemMenu text="Comunicados" icon="bullhorn" notification={5} />
+                <HorizontalItemMenu text="Diário" icon="history" />
+                <HorizontalItemMenu text="Cardápio" icon="utensils" />
+                <HorizontalItemMenu text="Mural de Fotos" icon="camera-retro" />
+            </ScrollView>
+        </View>
     )
 }
 
 
 const styles = StyleSheet.create({
     container: {
-        padding: 15,
+        paddingLeft: 15,
+        paddingVertical: 15,
+        alignItems: "center"
     }
 })

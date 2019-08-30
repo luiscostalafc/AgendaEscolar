@@ -3,7 +3,8 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    TextInput
 } from 'react-native'
 import { withNavigation } from 'react-navigation'
 
@@ -11,25 +12,13 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 class Header extends Component {
 
-    
     render() {
-        let d = new Date()
-        let hour = d.getHours()
-        let horario = ''
-
-        if (hour >= 5 && hour < 12)  horario = "Bom dia"
-        if (hour >= 12 && hour < 18)  horario = "Boa tarde"
-        if (hour >= 18 && hour < 5 )  horario = "Boa noite"
-
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
                     <Icon name="bars" size={25} color="#FFF" style={styles.icons} />
                 </TouchableOpacity>
-                <Text style={styles.titleText}> {horario}, Gustavo </Text>
-                <TouchableOpacity onPress={() => {this.props.navigation.navigate("Notifications")}} >
-                    <Icon name="bell-o" size={25} color="#FFF" style={styles.iconsNot} />
-                </TouchableOpacity>
+                <Icon name="search" size={25} color="#FFF" style={styles.iconsNot} />
             </View>
         )
 
@@ -40,19 +29,20 @@ const styles = StyleSheet.create({
     container: {
         height: 70,
         width: "100%",
+        padding: 20,
         flexDirection: 'row',
         backgroundColor: "#816ab0",
         justifyContent: "space-between",
-        padding: 20,
-        // borderBottomLeftRadius: 20,
-        // borderBottomRightRadius: 20,
+        alignItems: "center"
     },
     iconsNot: {
         transform: [{rotate: '-25deg'}]
     },
-    titleText: {
+    input: {
         color: "#FFF",
-        fontFamily: 'Montserrat Regular'
+        fontFamily: 'Montserrat Regular',
+        backgroundColor: "rgba(255,255,255,0.2)"
+
     }
 })
 

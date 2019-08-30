@@ -7,10 +7,10 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
-import Header from './components/Header'
-import HorizontalMenu from './components/HorizontalMenu'
-import Gallery from './components/Gallery'
-import Announcements from './components/Announcements'
+import Header from '../components/Header'
+import HorizontalMenu from '../components/HorizontalMenu'
+import Gallery from '../components/Gallery'
+import Announcements from '../components/Announcements'
 
 import ActionButton from 'react-native-action-button'
 
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#F7F5FA",
+		justifyContent: "space-between"
 	}
 })
 
