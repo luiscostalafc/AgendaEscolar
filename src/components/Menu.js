@@ -9,6 +9,8 @@ import {
 
 import { DrawerItems } from 'react-navigation'
 
+import commomStyles from '../commomStyles'
+
 import ArthurProfile from '../assets/photos/arthur_profile.png'
 
 
@@ -35,13 +37,13 @@ export default props => {
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "#816ab0",
+        backgroundColor: commomStyles.colors.mainColor,
         flexDirection: "row"
     },
     title: {
-        backgroundColor: "#FFF",
-        color: "#000",
-        fontFamily: "Montserrat Regular",
+        backgroundColor: commomStyles.colors.background,
+        color: commomStyles.colors.mainColor,
+        fontFamily: commomStyles.fontFamily,
         fontSize: 30,
         paddingTop: 20
     },
@@ -52,13 +54,13 @@ const styles = StyleSheet.create({
         // margin: 10
     },
     name: {
-        fontFamily: "Montserrat Regular",
-        color: "#FFF" ,
+        fontFamily: commomStyles.fontFamily,
+        color: commomStyles.colors.lightText ,
         fontSize: 15,
         margin: 10
     },
     school: {
-        fontFamily: "Montserrat Regular",
+        fontFamily: commomStyles.fontFamily,
         color: "rgba(255,255,255,0.55)" ,
         fontSize: 10,
         marginLeft: 10,

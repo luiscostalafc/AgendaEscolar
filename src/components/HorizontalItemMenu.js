@@ -6,6 +6,7 @@ import {
 } from 'react-native'
 
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import commomStyles from '../commomStyles'
 
 export default props => {
     return (
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     container: {
         width: 150,
         height: 100,
-        backgroundColor: "#FFF",
+        backgroundColor: commomStyles.colors.wrapBox,
         borderRadius: 5,
         elevation: 2,
         margin: 5,
@@ -45,13 +46,13 @@ const styles = StyleSheet.create({
         // marginTop: 15
     },
     text: {
-        fontFamily: 'Montserrat Regular',
-        color: "#816ab0",
+        fontFamily: commomStyles.fontFamily,
+        color: commomStyles.colors.mainColor,
         marginBottom: 15,
         marginLeft: 15
     },
     notification: {
-        backgroundColor: "#816ab0",
+        backgroundColor: commomStyles.colors.mainColor,
         height: 20,
         width: 20,
         borderRadius: 10,
@@ -59,8 +60,8 @@ const styles = StyleSheet.create({
 
     },
     textNotification: {
-        color: "#FFF",
-        fontFamily: "Montserrat Regular",
+        color: commomStyles.colors.wrapBox,
+        fontFamily: commomStyles.fontFamily,
         fontWeight: 'bold'
     }
 })

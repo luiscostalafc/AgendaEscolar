@@ -6,12 +6,16 @@ import {
 } from 'react-native'
 
 import HorizontalItemMenu from './HorizontalItemMenu'
+import notificationObj from '../assets/notificationsObj'
 
 export default props => {
+
+    notificationsReaded = notificationObj.filter(notification => !notification.read).length
+
     return (
-        <View style={styles.container}>
-            <ScrollView horizontal>
-                <HorizontalItemMenu text="Comunicados" icon="bullhorn" notification={5} />
+        <View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}  contentContainerStyle={styles.container} >
+                <HorizontalItemMenu text="Comunicados" icon="bullhorn" notification={this.notificationsReaded} />
                 <HorizontalItemMenu text="Diário" icon="history" />
                 <HorizontalItemMenu text="Cardápio" icon="utensils" />
                 <HorizontalItemMenu text="Mural de Fotos" icon="camera-retro" />
@@ -23,8 +27,7 @@ export default props => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingLeft: 15,
-        paddingVertical: 15,
+        padding: 15,
         alignItems: "center"
     }
 })

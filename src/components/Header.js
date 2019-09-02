@@ -8,6 +8,7 @@ import {
 import { withNavigation } from 'react-navigation'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+import commomStyles from '../commomStyles'
 
 class Header extends Component {
 
@@ -18,8 +19,9 @@ class Header extends Component {
         let horario = ''
 
         if (hour >= 5 && hour < 12)  horario = "Bom dia"
-        if (hour >= 12 && hour < 18)  horario = "Boa tarde"
-        if (hour >= 18 && hour < 5 )  horario = "Boa noite"
+        else if (hour >= 12 && hour < 18)  horario = "Boa tarde"
+        else if (hour >= 18 && hour < 5 )  horario = "Boa noite"
+        else horario = "Olá"
 
         return (
             <View style={styles.container}>
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
         height: 70,
         width: "100%",
         flexDirection: 'row',
-        backgroundColor: "#816ab0",
+        backgroundColor: commomStyles.colors.mainColor,
         justifyContent: "space-between",
         padding: 20,
         // borderBottomLeftRadius: 20,
@@ -51,8 +53,8 @@ const styles = StyleSheet.create({
         transform: [{rotate: '-25deg'}]
     },
     titleText: {
-        color: "#FFF",
-        fontFamily: 'Montserrat Regular'
+        color: commomStyles.colors.lightText,
+        fontFamily: commomStyles.fontFamily
     }
 })
 

@@ -9,6 +9,8 @@ import Foto1 from '../assets/photos/arthur1.png'
 import Foto2 from '../assets/photos/arthur2.png'
 import Foto3 from '../assets/photos/arthur3.png'
 
+import commomStyles from '../commomStyles'
+
 export default props => {
     return (
         <View style={styles.container}>
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         height: 310,
-        backgroundColor: "rgba(255,255,255,1)",
+        backgroundColor: commomStyles.colors.wrapBox,
         flexDirection: "row",
         paddingHorizontal: 15,
         paddingVertical: 10,

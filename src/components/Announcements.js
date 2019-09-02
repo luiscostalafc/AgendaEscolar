@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 
 import Anuncio1 from '../assets/photos/comunicado1.png'
+import commomStyles from '../commomStyles'
 
 export default props => {
     return (
@@ -47,19 +48,19 @@ const styles = StyleSheet.create({
         // backgroundColor: "red"
     },
     title: {
-        fontFamily: "Montserrat Regular",
+        fontFamily: commomStyles.fontFamily,
         fontWeight: "bold",
         fontSize: 20,
-        color: "#816ab0",
+        color: commomStyles.colors.mainColor,
         marginHorizontal: 10,
         marginTop: 10
     },
     text: {
         marginHorizontal: 10,
         marginTop: 5,
-        fontFamily: "Montserrat Regular",
+        fontFamily: commomStyles.fontFamily,
         // fontWeight: "bold",
         fontSize: 15,
-        color: "#816ab0",
+        color: commomStyles.colors.mainColor,
     }
 })

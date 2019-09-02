@@ -9,6 +9,8 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Swipeable from 'react-native-swipeable'
 
+import commomStyles from '../commomStyles'
+
 import Anuncio1 from '../assets/photos/comunicado1.png'
 
 
@@ -53,10 +55,10 @@ export default props => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#FFF",
+        backgroundColor: commomStyles.colors.wrapBox,
         width: "100%",
         height: 100,
-        borderRightColor: "#816ab0",
+        borderRightColor: commomStyles.colors.mainColor,
         // marginHorizontal: 5,
         marginVertical: 5,
         flexDirection: 'row',
@@ -74,22 +76,22 @@ const styles = StyleSheet.create({
     },
     category: {
         color: "rgba(0,0,0,.5)",
-        fontFamily: 'Montserrat Regular',
+        fontFamily: commomStyles.fontFamily,
         fontSize: 10
     },
     date: {
         color: "rgba(0,0,0,.5)",
-        fontFamily: 'Montserrat Regular',
+        fontFamily: commomStyles.fontFamily,
         fontSize: 10,
         textAlign: "right"
     },
     title: {
-        fontFamily: 'Montserrat Regular',
+        fontFamily: commomStyles.fontFamily,
         fontSize: 15
     },
     contentText: {
         flex: 2,
-        fontFamily: 'Montserrat Regular',
+        fontFamily: commomStyles.fontFamily,
         fontSize: 10,
         width: "100%"
     },
@@ -99,14 +101,14 @@ const styles = StyleSheet.create({
     },
     exclude: {
         flex: 1,
-        backgroundColor: '#816ab0',
+        backgroundColor: commomStyles.colors.mainColor,
         marginVertical: 5,
         flexDirection: 'row',
         justifyContent: "flex-end",
         alignItems: "center"
     },
     excludeText: {
-        fontFamily: "Montserrat Regular",
+        fontFamily: commomStyles.fontFamily,
         color: "#FFF",
         fontSize: 20,
         margin: 10,

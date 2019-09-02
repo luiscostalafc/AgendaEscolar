@@ -11,6 +11,7 @@ import Header from '../components/Header'
 import HorizontalMenu from '../components/HorizontalMenu'
 import Gallery from '../components/Gallery'
 import Announcements from '../components/Announcements'
+import commomStyles from '../commomStyles'
 
 import ActionButton from 'react-native-action-button'
 
@@ -23,7 +24,7 @@ export default function App() {
 			<Gallery  />
 			<ActionButton 
 				renderIcon={ active => <Icon name="comment" size={25} color="#FFF" /> } 
-				buttonColor="#816ab0" elevation={10}  />
+				buttonColor={commomStyles.colors.mainColor} elevation={10}  />
 			<Announcements />
 		</View>
 	)
